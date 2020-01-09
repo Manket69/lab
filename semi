@@ -1,0 +1,89 @@
+Seminarium
+
+Temat:
+Opracowanie aplikacji moblina umożliwiającej zarządzanie zapotrzebowaniem w firmie DOT2DOT
+Opis:
+Aplikacja ma zarządzać wnioskami które są składane prze pracowników/kierowników stąd są
+wysyłane do zarządu, które oczekują na akceptacje. Jeżeli wniosek zostanie rozpatrzony pozytywnie
+są one przesyłane do działu które są odpowiedzialne za zakup sprzętu/oprogramowania. Użytkownicy
+mają podgląd do ich statusów,
+
+Możliwy rozwój:
+//Następną funkcją byłoby zarządzanie dostępami do miejsc sieciowych, pracownik składa prośbę o
+//dostęp do folderu sieciowego, umieszczając tam w jakim celu jest ona mu potrzebna, na jaki czas
+//jest dane dostęp potrzebny( na dzień w celu sczytania jednego plik czy dożywotni), rodzaj
+//uprawnień, następnie jest ona wysyłana do działu IT które nadaje te uprawnienia. System śledzi ile
+//czasu minęło od nadania uprawnień i przypomina o cofnięciu przestarzałych uprawnień.
+//Opcjonalnie system mógłbym skorzystać ze skryptów by okresowo robić raport/audyt uprawnień
+//na dyskach sieciowych w formacie xls a następnie kierownik działu IT mógł z tego robić wizualizacje
+//w QlikSense.
+
+Literatura
+Martin Fowler &quot;Architektura systemów zarządzania przedsiębiorstwem. Wzorce projektowe&quot;.
+http://pti.cs.pollub.pl/wp-content/uploads/2018/06/Aplikacje-internetowe-2008.pdf
+Gosling, James; Joy, Bill; Steele, Guy; Bracha, Gilad; Buckley, Alex: The Java
+Language Specification, książka online:
+https://docs.oracle.com/javase/specs/jls/se8/html/index.html (2014)
+Griffiths, Down, Android: programowanie aplikacji, Gliwice, Helion, 2016, ISBN 978-83-
+283-2063-5
+Android, dokumentacja, [dostęp: 5 grudnia 2017] https://developer.android.com/index.html
+
+Sacha, Krzysztof: Inżynieria Oprogramowania, Wydawnictwo Naukowe PWN (2010)
+Dokumentacja klasy AsyncTask,
+http://developer.android.com/reference/android/os/AsyncTask.html
+System Properties Comparison Firebase Realtime Database vs. SQLite
+https://db-engines.com/en/system/Firebase+Realtime+Database%3bSQLite
+Komatineni, Satya, MacLean, Dave, Hashimi, Sayed: Android 3 – tworzenie aplikacji,
+Helion (2012)
+JSON: Wprowadzenie
+http://www.json.org/json-pl.html
+Interfejsy API działające po stronie klienta
+https://developer.mozilla.org/pl/docs/Learn/JavaScript/Client-side_web_APIs
+Programowanie aplikacji mobilnych z wykorzystaniem REST I SOAP
+http://www.tomaszx.pl/materialy/pum_wyk17.pdf
+MVP Pattern – Java / Android
+https://www.devmobile.pl/mvp-pattern-java-android/
+
+Spis treści
+1.Wstep
+-Motywacja i Cel pracy
+- Wprowadzenie
+-System Android
+2.Projekt aplikacji
+-Wymagania funkcjonalne
+-Wymagania niefunkcjonalne
+-Graficzne przedstawienie przypadków użycia
+-Wzorzec architektoniczny Model View Presenter
+-Diagram pakietów
+-Grupy użytkowników
+&gt;użytkownik zwykły/pracownik
+&gt;Dział it/zakupowy
+&gt;zarząd/decyzyjny
+3.Interfejsy użytkowników
+-Widok logowania
+-Widok startowy
+-Widok formularza
+-Widok statusu wniosków
+-Widok decyzyjny dla wniosków
+-Widok informacyjny/zakupowy
+-Widok powiadomień
+4.Implementacja
+4.1.Środowisko i narzędzia
+-Java
+-Android Studio
+-Visual Studio Code
+-Node.js
+4.2 Autoryzacja użytkownika przez LDAP do kontrolera domeny firmowej
+4.3.Widoki, komponenty
+4.4 Implementacja wzorca MVP
+4.5 Baza Danych
+-Firebase
+-SQLite
+4.6 Dodatki
+-Retrofit
+- IFTTT Webhooks service
+4.7 Wzorce projektowe
+5.Podsumowanie
+-Podsumowanie opracowania
+
+-Plan rozwoju aplikacji
