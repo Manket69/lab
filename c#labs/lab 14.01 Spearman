@@ -1,0 +1,119 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp24
+{
+
+    public delegate void Dzialanie(double x,double y);
+
+    public class Matma
+    {
+        public void Srednia(double l1, double l2) { Console.WriteLine(l1/l2); }
+
+        public void Sparman(double d, double d2) { Console.WriteLine(d-d2); }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] klikniecia = new int[] { 9860, 11228, 10348, 9936, 11203, 10387, 9588, 9611 };
+            int wynik = 0;
+            int[] klik_temp = new int[8];
+            int[] zamow_temp = new int[8];
+            int[] roznice = new int[8];
+            int[] zamowienia = new int[] { 79, 86, 77, 76, 80, 80, 64, 66 };
+            double[] d = new double[8];
+            double sumad = 0;
+            int[] rangi_X = new int[] { };
+            double asd = 0;
+            int[] rangi_Y = new int[] { };
+            double dsa =0;
+          
+            
+
+            for (int j = 0;j<klikniecia.Length;j++)
+            {
+               
+                int count = 0;
+                int count2 = 0;
+                for( int k=0; k < klikniecia.Length; k++)
+                {
+                    if (klikniecia[k] > klikniecia[j]) { count++; }
+                    if (zamowienia[k] > zamowienia[j]) { count2++; }
+                }
+
+                Console.WriteLine(klik_temp[j] = count + 1);
+                Console.WriteLine(zamow_temp[j] = count2 + 1);
+
+                roznice[j] = klik_temp[j] - zamow_temp[j];
+
+
+                d[j]= Math.Pow(roznice[j], 2);
+
+                 sumad += d[j];
+                
+
+
+            }
+
+            Console.WriteLine("------------");
+            for (int j = 0; j < zamowienia.Length; j++)
+            {
+                int count = 0;
+                for (int k = 0; k < klikniecia.Length; k++)
+                {
+                    if (zamowienia[k] > zamowienia[j]) { count++; }
+                }
+
+                Console.WriteLine(zamow_temp[j] = count + 1);
+               
+            }
+
+
+
+
+
+
+            //  Console.WriteLine(klikniecia.Rank);
+
+
+
+
+            for (int i = 0; i < klikniecia.Length; i++)       
+            {
+                wynik += klikniecia[i];                       
+            }
+            int n = klikniecia.Length;
+
+
+
+
+            Console.WriteLine("----");
+            Console.WriteLine(sumad);
+            Console.WriteLine((6*sumad)/(8*(Math.Pow(8,2)-1)));
+            asd = (6 * sumad) / (8 * (Math.Pow(8, 2) - 1));
+            Console.WriteLine(1-asd);
+            dsa = 1 - asd;
+
+
+
+
+            Matma matma = new Matma();
+
+            Dzialanie dzialanie = new Dzialanie(matma.Srednia);
+            Dzialanie dzialanie2 = new Dzialanie(matma.Sparman);
+
+
+            dzialanie(wynik, n);
+            dzialanie2(1,dsa);
+
+
+            Console.ReadKey();
+        }
+    }
+}
